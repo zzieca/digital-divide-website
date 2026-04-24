@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Skills Gap</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: #2c3e50;
+            padding: 15px 0;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* HEADER */
+        header {
+            height: 100vh;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 2s ease;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 20px;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 25px;
+            width: 85%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.6s;
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<header id="home">
+    <h1>Digital Divide</h1>
+    <p>Bridging gaps through digital literacy and inclusion</p>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="card">
+    <h2>Introduction</h2>
+    <p>Technology is essential in modern life, but not everyone has the skills to use it effectively. This creates a digital skills gap.</p>
+</div>
+
+<div class="card">
+    <h2>Vision</h2>
+    <p>To create an inclusive society where everyone has equal access to digital skills.</p>
+</div>
+
+<div class="card">
+    <h2>Mission</h2>
+    <p>Provide tools, training, and resources to reduce the digital skills gap.</p>
+</div>
+
+<div class="card">
+    <h2>Purpose</h2>
+    <p>Help students improve their digital skills for academic success.</p>
+</div>
+
+<div class="card">
+    <h2>Description</h2>
+    <p>The gap between people who can and cannot use technology effectively.</p>
+</div>
+
+<div class="card">
+    <h2>Budget</h2>
+    <p>Total: ₱70,000</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="card">
+    <h2>Contact Information</h2>
+    <p><strong>Name:</strong> Franz Quinno Borres</p>
+    <p><strong>Email:</strong> fborres6717val@student.fatima.edu.ph</p>
+    <p><strong>Contact:</strong> 0993-671-9208</p>
+</div>
+
+</section>
+
+<footer>
+    <p>© 2026 Digital Skills Gap Project</p>
+</footer>
+
+<!-- SCRIPT FOR ANIMATION -->
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    window.addEventListener('scroll', () => {
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if(cardTop < window.innerHeight - 50){
+                card.classList.add('show');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
